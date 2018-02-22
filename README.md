@@ -1,0 +1,2 @@
+# DataAnalysisLibraries
+A selection of Libraries that contain classes and functions that can be used to analyse most data types. The Libraries are split into sections based on the data they are intended for: Continuous Numeric data, Categoric data, Natural Language data. There is also a Library of functions and Classes that are useful across all of these data types. These libraries primarily make use of pandas, numpy, scikit-learn, matplotlib and seaborn.
