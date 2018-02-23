@@ -33,8 +33,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-get_ipython().magic('matplotlib inline')
-
+import dataAnalysis.numericData.linearRegressionTools as lr
 
 # ## Get the Data
 # **Read in the advertising.csv file and set it to a data frame called ad_data.**

@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/dataAnalysis/__init__.py
+src/dataAnalysis.egg-info/PKG-INFO
+src/dataAnalysis.egg-info/SOURCES.txt
+src/dataAnalysis.egg-info/dependency_links.txt
+src/dataAnalysis.egg-info/top_level.txt
+src/dataAnalysis/categoricalData/__init__.py
+src/dataAnalysis/dataExploration/__init__.py
+src/dataAnalysis/dataManipulation/__init__.py
+src/dataAnalysis/naturalLanguage/__init__.py
+src/dataAnalysis/naturalLanguage/naturalLanguageModelling.py
+src/dataAnalysis/numericData/__init__.py
+src/dataAnalysis/numericData/linearRegressionTools.py

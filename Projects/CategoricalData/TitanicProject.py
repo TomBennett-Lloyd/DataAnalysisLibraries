@@ -1,61 +1,24 @@
 
-# coding: utf-8
 
-# ___
-# 
-# <a href='http://www.pieriandata.com'> <img src='../Pierian_Data_Logo.png' /></a>
-# ___
-# # Logistic Regression with Python
-# 
-# For this lecture we will be working with the [Titanic Data Set from Kaggle](https://www.kaggle.com/c/titanic). This is a very famous data set and very often is a student's first step in machine learning! 
-# 
-# We'll be trying to predict a classification- survival or deceased.
-# Let's begin our understanding of implementing Logistic Regression in Python for classification.
-# 
-# We'll use a "semi-cleaned" version of the titanic data set, if you use the data set hosted directly on Kaggle, you may need to do some additional cleaning not shown in this lecture notebook.
-# 
-# ## Import Libraries
-# Let's import some libraries to get started!
-
-# In[1]:
 
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-get_ipython().magic('matplotlib inline')
 
 
-# ## The Data
-# 
-# Let's start by reading in the titanic_train.csv file into a pandas dataframe.
 
-# In[153]:
-
-
-train = pd.read_csv('titanic_train.csv')
-test= pd.read_csv('titanic_test.csv')
-train=pd.concat([train,test])
-
-
-# In[57]:
-
+from dataAnalysis.dataExploration.missingData import missingDataAnalyser as misDA
+train = pd.read_csv('data/titanic_train.csv')
+test= pd.read_csv('data/titanic_test.csv')
+DA=misDA(train,test)
+sp=DA.imputeMissing()
+sp2=DA.getSparseCols()
 
 train.head()
 
-
-# # Exploratory Data Analysis
-# 
-# Let's begin some exploratory data analysis! We'll start by checking out missing data!
-# 
-# ## Missing Data
-# 
-# We can use seaborn to create a simple heatmap to see where we are missing data!
-
-# In[154]:
-
-
+#check for missing data
 sns.heatmap(train.isnull(),yticklabels=False,cbar=False,cmap='viridis')
 
 
